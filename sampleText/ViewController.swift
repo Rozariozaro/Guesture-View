@@ -12,14 +12,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let vw = GestureView()
+        vw.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(vw)
+        NSLayoutConstraint.activate([
+            vw.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0),
+            vw.widthAnchor.constraint(equalToConstant: 200),
+            vw.heightAnchor.constraint(equalToConstant: 200),
+            vw.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0)])
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
