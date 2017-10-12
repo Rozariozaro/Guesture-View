@@ -15,6 +15,7 @@ class ViewController: UIViewController {
         
         let vw = GestureView()
         vw.translatesAutoresizingMaskIntoConstraints = false
+        vw.backgroundColor = .red
         view.addSubview(vw)
         NSLayoutConstraint.activate([
             vw.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0),
